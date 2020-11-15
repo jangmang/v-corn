@@ -1,0 +1,35 @@
+@font-face {
+    font-family:'SpoqaL';
+    font-style:normal;
+    src: url('Spoqa-HanSansLight.eot');
+    src: url('Spoqa-HanSansLight.eot?#iefix') format('embedded-opentype'),
+        url('Spoqa-HanSansLight.woff') format('woff'),
+        url('Spoqa-HanSansLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'SpoqaR';
+    font-style:normal;
+    src: url('Spoqa-HanSansRegular.eot');
+    src: url('Spoqa-HanSansRegular.eot?#iefix') format('embedded-opentype'),
+        url('Spoqa-HanSansRegular.woff') format('woff'),
+        url('Spoqa-HanSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'SpoqaB';
+    font-style:normal;
+    src: url('Spoqa-HanSansBold.eot');
+    src: url('Spoqa-HanSansBold.eot?#iefix') format('embedded-opentype'),
+        url('Spoqa-HanSansBold.woff') format('woff'),
+        url('Spoqa-HanSansBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'SpoqaT';
+    font-style:normal;
+    src: url('Spoqa-HanSansThin.eot');
+    src: url('Spoqa-HanSansThin.eot?#iefix') format('embedded-opentype'),
+        url('Spoqa-HanSansThin.woff') format('woff'),
+        url('Spoqa-HanSansThin.ttf') format('truetype');
+}

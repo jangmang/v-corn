@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Work list</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style type="text/css">
+body, div, p, table, th, td { margin:0; padding:0; font-family:dotum; font-size:12px; line-height:16px; color:#777777; }
+a { text-decoration:none; color:#777777; cursor:pointer; }
+a:hover { text-decoration:underline; color:#2a2a2a; cursor:pointer; }
+.table_list {}
+table { width:100%; border:solid 1px #cccccc; border-collapse:collapse}
+table caption { padding:10px 0 15px 3px; font-weight:bold; font-size:24px; color:#333333; letter-spacing:-1px; text-align:left; }
+table caption span {font-size:12px}
+table th { background-color:#3a3a3a; border:solid 1px #cccccc; padding:7px 0 5px 0; font-size:11px; font-weight:bold; color:#fff; }
+table td { border:solid 1px #cccccc; padding:7px 10px 5px 10px; vertical-align:top; }
+table td.index { background-color:#f5f5f5; border-bottom:solid 2px #aaaaaa;}
+table td.nodata {color:#cccccc}
+table td.stat {text-align:center}
+table tr.done td.stat {font-weight:bold}
+table tr:hover td {background:#eee}
+table tr td a {display:block; font-weight:bold}
+table tr td a:focus,
+table tr td a:active,
+table tr td a:hover {color:red; text-decoration:underline}
+.wrap {padding:20px}
+.content_area td {border-top:2px solid #aaa}
+
+.guide-nav {position:absolute; right:20px; top:20px;}
+.guide-nav a {display:inline-block; width:100px; color:#333; text-align:center; padding:10px; border:1px solid #333; background:#ddd;}
+
+.percent {position:absolute; right:35px; top:37px; color:#222; vertical-align:middle; line-height:10px;}
+.percent .line {position:relative; display:inline-block; width:200px; height:10px; vertical-align:middle; margin-right:10px; border-radius:10px; background:#ddd}
+.percent .line em {position:absolute; left:0; top:0; display:inline-block; width:0; height:10px; vertical-align:middle; border-radius:10px; background:#f66759}
+</style>
+</head>
+
+<body>
+	<div class="wrap">
+
+        <!-- <div class="guide-nav">
+            <a href="" title="" class="on" target="_blank">공통 HTML</a>
+        </div> -->
+        <div class="percent">퍼블진척률 : <span class="line"><em></em></span><span class="number"></span>%</div>
+        <div class="table_list">
+            <table class="listbox">
+            <caption>W-con <span>Total : 0 / 0</span></caption>
+            <colgroup>
+                <col width="200px" />
+                <col width="200px" />
+                <col width="200px" />
+                <col width="200px" />
+                <col width="" />                
+                <col width="200px" />
+                <col width="200px" />
+            </colgroup>
+            <tr>
+                <th>1Deph</th>
+                <th>2Deph</th>
+                <th>3Deph</th>
+                <th>4Deph</th>
+                <th>URL</th>
+                <th>STATUS</th>
+                <th>ETC</th>
+            </tr>
+
+            <tr>
+                <td>로그인</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="login.html" target="_blank" class="btn">login.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>메인</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="main.html" target="_blank" class="btn">main.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            
+            <!-- 프로젝트 -->
+            <tr>
+                <td>프로젝트 생성</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="project_create.html" target="_blank" class="btn">project_create.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">프로젝트</td>
+                <td>프로젝트 검색</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="project_list.html" target="_blank" class="btn">project_list.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>프로젝트 요약</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="project_view.html" target="_blank" class="btn">project_view.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>프로젝트 수정</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="project_modify.html" target="_blank" class="btn">project_modify.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td rowspan="2">프로젝트 참석자</td>
+                <td>요약</td>
+                <td class="nodata">-</td>
+                <td><a href="project_people.html" target="_blank" class="btn">project_people.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>수정/등록</td>
+                <td class="nodata">-</td>
+                <td><a href="project_people_modify.html" target="_blank" class="btn">project_people_modify.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+
+            <!-- 거래처 -->
+            <tr>
+                <td rowspan="9">거래처</td>
+                <td rowspan="4">제약사</td>
+                <td>제약사 검색</td>
+                <td class="nodata">-</td>
+                <td><a href="medicine_list.html" target="_blank" class="btn">medicine_list.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>제약사 등록</td>
+                <td class="nodata">-</td>
+                <td><a href="medicine_create.html" target="_blank" class="btn">medicine_create.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td rowspan="2">제약사 요약</td>
+                <td>상세</td>
+                <td><a href="medicine_view.html" target="_blank" class="btn">medicine_view.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>제품등록</td>
+                <td><a href="medicine_product.html" target="_blank" class="btn">medicine_product.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">학회</td>
+                <td>학회 검색</td>
+                <td class="nodata">-</td>
+                <td><a href="academy_list.html" target="_blank" class="btn">academy_list.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>학회 등록</td>
+                <td class="nodata">-</td>
+                <td><a href="academy_create.html" target="_blank" class="btn">academy_create.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">협력업체</td>
+                <td>협력업체 검색</td>
+                <td class="nodata">-</td>
+                <td><a href="partner_list.html" target="_blank" class="btn">partner_list.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>협력업체 등록</td>
+                <td class="nodata">-</td>
+                <td><a href="partner_create.html" target="_blank" class="btn">partner_create.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>협력업체 요약</td>
+                <td class="nodata">-</td>
+                <td><a href="partner_view.html" target="_blank" class="btn">partner_view.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">Venue</td>
+                <td>Venue 검색</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="venue_list.html" target="_blank" class="btn">venue_list.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>Venue 등록</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="venue_create.html" target="_blank" class="btn">venue_create.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>Venue 요약</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="venue_view.html" target="_blank" class="btn">venue_view.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">회원관리</td>
+                <td>회원 검색</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="members_list.html" target="_blank" class="btn">members_list.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>회원 등록</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="members_create.html" target="_blank" class="btn">members_create.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>
+            <tr>
+                <td>회원 상세</td>
+                <td class="nodata">-</td>
+                <td class="nodata">-</td>
+                <td><a href="members_view.html" target="_blank" class="btn">members_view.html</a></td>
+                <td class="stat">-</td>
+                <td class="nodata">-</td>
+            </tr>           
+            
+            </table>
+        </div>
+	</div>
+
+	<script type="text/javascript">
+        var count = 0;
+        var total = 0;
+        $(".stat").each(function(i){
+            total++;
+            if ($(this).text() == "완료") {
+                count++;
+                $(this).css({"color":"red", "font-weight":"bold"});
+            }
+        });
+        $("caption span").text("Total :" + count + " / " + total);
+
+        var percent = Math.floor(count/total*100);        
+        $(".percent .number").text(percent);
+        $(".percent .line em").css("width", percent+"%");
+	</script>
+</body>
+</html>
