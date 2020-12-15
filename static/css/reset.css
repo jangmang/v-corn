@@ -19,10 +19,12 @@ ul, ol, li{list-style:none}
 button{cursor:pointer}
 button, input, select, textarea{border:0 none; outline:0 none; background-color:transparent; border-radius:0; -webkit-border-radius:0; vertical-align:middle}
 textarea{vertical-align:top;border:solid 1px #999}
+select::-ms-expand {display: none;}
 img {width:100%; vertical-align:top}
 
 table{width:100%; border-collapse:collapse; empty-cells:show; border-spacing:0; table-layout:fixed}
 table caption {overflow:hidden; visibility:hidden; width:0; height:0; font-size:0; line-height:0; text-indent:-9999em}
+table th, table, td {text-align: left; vertical-align: top;}
 fieldset legend{display:block; overflow:hidden; position:absolute; top:-1000em; left:0}
 
 .ir {position:absolute; overflow:hidden; width:0px; height:0px; font-size:0}

@@ -1,8 +1,61 @@
 @charset "utf-8";
 
-
+html, body {font-family:'NotoSansR';}
 #wrap {height:100%;}
-header {width:100%; height:60px; color:#fff; font-size:19px; padding:17px 0 0 30px; background: #242933;}
-#lnb {position:absolute; left:0; width:280px; height:100%; padding:48px 0 0 30px; background: #F5F5F5;}
+header {z-index:10; position:fixed; left:0; top:0; width:100%; height:60px; color:#fff; font-size:19px; padding:17px 0 0 30px; background: #242933;}
+#lnb {position:fixed; left:0; top:60px; width:280px; height:100%; padding:38px 30px 0; background: #F5F5F5;}
+#lnb li {margin-bottom:15px}
+#lnb li a {display:block; width:100%; height:40px; font-size:14px; line-height:40px; border-radius:6px; padding:0 15px;}
+#lnb li a:hover,
+#lnb li a.on {background:#ebebeb}
+#lnb li a:hover svg path,
+#lnb li a.on svg path {fill:#000}
+#lnb li a svg {width:16px; vertical-align: middle; margin-right:20px;}
 
-#container {margin-left:280px; padding:40px 0 0 29px;}
+#container {max-width:1320px; margin-left:280px; padding:100px 29px;}
+#container h2 {font-family:'NotoSansB'; font-size:24px;}
+#container h3 {font-family:'NotoSansR'; font-size:18px; margin-top:21px}
+
+#container .tbl_type1 {border: 1px solid #DEE2E6; border-radius: 8px; margin-top:10px}
+#container .tbl_type1 table th {font-family:'NotoSansR'; font-size:13px; padding:29px; border-top: 1px solid #DEE2E6;}
+#container .tbl_type1 table td {font-size:13px; padding:29px 29px 29px 0; border-top: 1px solid #DEE2E6;}
+#container .tbl_type1 table tr:first-child th,
+#container .tbl_type1 table tr:first-child td {border-top:0}
+#container .tbl_type1 table td .row {display:flex}
+#container .tbl_type1 table td .row + .row {margin-top:29px}
+#container .tbl_type1 table td dl.col {width:100%; padding-left:13px}
+#container .tbl_type1 table td dl:first-child {padding-left:0}
+#container .tbl_type1 table td dl dt {color:#868686; font-size:13px}
+#container .tbl_type1 table td dl dd input[type="text"] {width:100%; height:40px; font-size:13px; padding-left:14px; border-radius:4px; margin-right:11px; margin-top:8px; background:#f5f5f5}
+#container .tbl_type1 table td dl dd input[type="text"]::placeholder {color:#2f2f2f; font-size:13px;}
+
+#container .tbl_type1 table td dl dd input[type="radio"] {position:absolute; left:-9999px; width:0; height:0; font-size:0;}
+#container .tbl_type1 table td dl dd input[type="radio"] + label {position:relative; display:inline-block; min-width:83px; padding-left:35px; margin-right:40px; margin-top:18px;}
+#container .tbl_type1 table td dl dd input[type="radio"] + label:before {content:''; position:absolute; left:0; top:0; display:inline-block; width:20px; height:20px; background: #DEE2E6; border-radius:20px;}
+#container .tbl_type1 table td dl dd input[type="radio"] + label:after {content:''; position:absolute; left:2px; top:2px; display:inline-block; width:8px; height:8px; border:4px solid #fff; border-radius:16px; background:#fff}
+#container .tbl_type1 table td dl dd input[type="radio"]:checked + label:before {background:#567df4;}
+#container .tbl_type1 table td dl dd input[type="radio"]:checked + label:after {background:transparent}
+
+#container .tbl_type1 table td dl dd input[type="checkbox"] {position:absolute; left:-9999px; width:0; height:0; font-size:0;}
+#container .tbl_type1 table td dl dd input[type="checkbox"] + label {position:relative; display:inline-block; min-width:83px; padding-left:35px; margin-right:40px; margin-top:18px;}
+#container .tbl_type1 table td dl dd input[type="checkbox"] + label:before {content:''; position:absolute; left:0; top:0; display:inline-block; width:18px; height:18px; border-radius:2px; border:2px solid #E5E8EB; box-sizing: border-box;}
+#container .tbl_type1 table td dl dd input[type="checkbox"]:checked + label:after {content:''; position:absolute; left:0; top:0; display:inline-block; width:18px; height:18px; background:url(../img/icon_checkbox.png) 0 0 no-repeat}
+
+#container .tbl_type1 table td dl dd .select_box {position:relative; margin-top:8px;}
+#container .tbl_type1 table td dl dd .select_box select {width:100%; height:40px; color:#2f2f2f; font-size:13px; padding:0 14px; border-radius:4px; margin-right:11px; background:#f5f5f5}
+#container .tbl_type1 table td dl dd .select_box::after {content:''; position:absolute; right:15px; top:50%; display:block; border:6px solid transparent; border-top:6px solid #c4c4c4; margin-top:-3px;}
+
+#container .tbl_type1 table td dl dd .calendar_form {margin-top:8px;}
+#container .tbl_type1 table td dl dd .calendar_form input {width:150px; height:40px; font-size:13px; padding-left:14px; border-radius:4px; margin-right:11px; background:#f5f5f5 url(../img/icon_calendar.png) 90% 50% no-repeat}
+#container .tbl_type1 table td dl dd .calendar_form input::placeholder {color:#2f2f2f; font-size:13px;}
+#container .tbl_type1 table td dl dd .calendar_form .day_txt {display:inline-block; font-size:13px; margin-left:20px}
+
+#container .btn_area {text-align:right; margin-top:26px}
+#container .btn_area button,
+#container .btn_area a {display:inline-block; min-width:150px; height:44px; line-height:44px; font-family:'NotoSansM'; font-size:14px; text-align:center; border-radius:4px; margin-left:7px;}
+
+#container .btn_area .btn_type1 {color:#fff; background:#567DF4;}
+#container .btn_area .btn_type2 {color:#567DF4; background:#EFF2FE;}
+
+
+
